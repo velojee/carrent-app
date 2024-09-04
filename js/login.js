@@ -34,4 +34,3 @@ passwordInput.addEventListener("input", function() {
 // Initial check on page load
 updateBorderColor(usernameInput);
 updateBorderColor(passwordInput);
-

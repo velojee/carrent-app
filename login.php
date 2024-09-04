@@ -1,53 +1,43 @@
 <?php
 include 'koneksi.php';
 
-$unamekosong=null;
-$passwordkosong=null;
-$validasigagal=null;
-$uname=null;   
-$psword=null;
+if(isset( $_POST['username'] ) && isset( $_POST['password'])){
+    function validate($data){
+        $data=trim($data);
+        $data=stripcslashes($data);
+        $data=htmlspecialchars($data);
+        return $data;
+    }
+    $username = validate($_POST['username']);
+    $password = validate($_POST['password']);
 
-/*
-/*post form masuk*/
-if(isset($_POST['masuk'])){
-
-    /*fetch data form login*/
-    $uname=$_POST['username'];
-    $psword=$_POST['password'];
-
-    if(empty($uname)||empty($psword)){
-        $validasigagal= 'Tolong isi username dan password';
+    if(empty($username) || empty($password)){
+    header('Location: index.php?error=isi semua data');
+    exit();
     }else{
-        $stmt= $conn->prepare('SELECT * FROM pengguna WHERE id_pengguna = ? AND password = ?');
-        $stmt->bind_param('ss',$uname, $psword);
-
+        $stmt= $conn->prepare('SELECT * FROM pengguna WHERE id_pengguna = ?');
+        $stmt->bind_param('s',$username);
         $stmt->execute();
         $result=$stmt->get_result();
 
-        if ($result->num_rows > 0) {
-            // Redirect to dashboard
-            header("Location: dashboard.html");
+        if ($result->num_rows == 1) {
+            $fetchdata = $result->fetch_assoc();           
+            if ($password === $fetchdata['password']) {
+                // redirect kedalam dashboard
+                $_SESSION['username'] = $fetchdata['username'];
+                header('Location: dashboard.html');
+                exit();
+            }else {
+                // password yang dimasukan tidak sesuai
+                header('Location: index.php?error= password yang anda masukan salah');
+                exit();
+            }
+        }else {
+            // username tidak ditemukan
+            header('Location: index.php?error= user tidak ditemukan');
             exit();
-        } else {
-            $validasigagal = 'Incorrect username or password.';
-        }
+        } 
     }
-    $stmt->close();
-    $conn->close();
-    /*
-    $stmt= $conn->prepare('SELECT * FROM pengguna WHERE id_pengguna = ? AND password = ?');
-    $stmt->bind_param('ss',$uname, $psword);
-
-    $stmt->execute();
-    $result=$stmt->get_result();
-
-    if($result->num_rows > 0){
-        header('Location: dashboard.html');
-    }else{
-        $validasigagal='username atau password yang anda masukan salah';
-    }
-
-    $stmt->close();
-    $conn->close();*/
-
 }
+$stmt->close();
+$conn->close();

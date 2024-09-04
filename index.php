@@ -19,13 +19,17 @@
             <input id='username' class="input" type="text" name="username" placeholder="nama pengguna" ><br>
     
             <!--password form input-->
-            <label>passoword</label><br>
+            <br><br><label>passoword</label><br>
             <input id="password" class="input" type="password" name="password" placeholder="kata sandi" ><br>
 
             </div>
             <button type="submit" name="masuk">Masuk</button>
+            
+            <?php if(isset($_GET['error'])){?>
+            <p class="error"><?php echo $_GET['error']; ?></p>
+            <?php }?>
+            
         </form>
     </div>
-
 </body>
 </html>
