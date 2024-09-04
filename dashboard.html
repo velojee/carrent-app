@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+
+         <!-- Menu Kiri Dashboard-->
+        <div class="dashboard-bar">
+            <ul class="dashboard-content">
+                <img width="80px" height="80px" src="images/enthusiast-logo.png" alt="enthusiast-logo" class="logo">
+                <li class="dashboard-item">
+                    <a href="dashboard.html" class="dashboard-links" id="home-page">
+                        <img width="14px" height="14px"src="images/home-icon.png" alt="home-icon">Dashboard</a>
+                </li>
+                <li class="dashboard-item">
+                    <a href="transaksi.html" class="dashboard-links" id="home-page">
+                        <img width="14px" height="14px"src="images/trans-icon.png" alt="home-icon">Transaksi</a>
+                </li>
+                <li class="dashboard-item">
+                    <a href="mobil.php" class="dashboard-links" id="home-page">
+                        <img width="14px" height="14px"src="images/mobil-icon.png" alt="home-icon">Mobil</a>
+                </li>
+                <li class="dashboard-item">
+                    <a href="/" class="dashboard-links" id="home-page"><img width="14px" height="14px"src="images/pengemudi-icon.png" alt="home-icon">Supir</a>
+                </li>
+                <li class="dashboard-item">
+                    <a href="/" class="dashboard-links" id="home-page"><img width="14px" height="14px"src="images/pengguna-icon.png" alt="home-icon">Pengguna</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Content Utama Dashboard-->
+        <div class="konten">
+            <div class="konten-header">Rincian Transaksi</div>
+            <div class="konten-rincian">
+                <div class="label-wrapper">
+                    <input class="nav-item" name="nav" type="radio" id="opt-1">
+                    <label class="category" for="opt-1">All</label>
+                </div>
+                <div class="label-wrapper">
+                    <input class="nav-item" name="nav" type="radio" id="opt-2">
+                    <label class="category" for="opt-2">Selesai</label>
+                </div>
+                <div class="label-wrapper">
+                    <input class="nav-item" name="nav" type="radio" id="opt-3">
+                    <label class="category" for="opt-3">Proses</label>
+                </div>
+                <div class="label-wrapper">
+                    <input class="nav-item" name="nav" type="radio" id="opt-4">
+                    <label class="category" for="opt-4">Batal</label>
+                </div>
+            </div>
+        </div>
+
+        <!--  Menu Kanan Dashboard-->
+        <div class="ringkasan">
+            <div class="header">Rangkuman</div>
+            <div class="ringkasan-rincian">
+                <div class="kotak-rincian">
+                    <div class="deskripsi-rincian">
+                        <div class="jumlah">8</div>
+                        <div class="nama-rincian">Mobil Tersedia</div>
+                    </div>
+                </div>
+                <div class="kotak-rincian">
+                    <div class="deskripsi-rincian">
+                        <div class="jumlah">8</div>
+                        <div class="nama-rincian">Penyewaan Terselesaikan</div>
+                    </div>
+                </div>
+                <div class="kotak-rincian">
+                    <div class="deskripsi-rincian">
+                        <div class="jumlah">8</div>
+                        <div class="nama-rincian">Penyewaan Sedang Berlangsung</div>
+                    </div>
+                </div>
+                <div class="kotak-rincian">
+                    <div class="deskripsi-rincian">
+                        <div class="jumlah">8</div>
+                        <div class="nama-rincian">Pengemudi Tersedia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
