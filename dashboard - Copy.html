@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Menu Kiri Dashboard -->
+        <div class="sidebar">
+            <img src="images/enthusiast-logo.png" alt="Logo">
+            <a href="https://google.com"><img class="icon" src="images/home-icon.png" alt="Dashboard Icon">Dashboard</a>
+            <a href="https://google.com"><img class="icon" src="images/trans-icon.png" alt="Transaksi Icon">Transaksi</a>
+            <a href="https://google.com"><img class="icon" src="images/mobil-icon.png" alt="Mobil Icon">Mobil</a>
+            <a href="https://google.com"><img class="icon" src="images/Supir-icon.png" alt="Supir Icon">Supir</a>
+            <a href="https://google.com"><img class="icon" src="images/Pengguna-icon.png" alt="Pengguna Icon">Pengguna</a>
+        </div>
+    </div>
+
+        <!-- Content Utama Dashboard -->
+        <div class="main-content">
+            <h1 id="main-title">Rincian Transaksi</h1>
+            <div class="button-box">
+                <button id="all1" onclick="setActive(this)">All</button>
+                <button id="all2" onclick="setActive(this)">Selesai</button>
+                <button id="all3" onclick="setActive(this)">Proses</button>
+                <button id="all4" onclick="setActive(this)">Batal</button>
+            </div>
+
+        <!-- Menu Kanan Dashboard -->
+        <div class="right-sidebar">
+            <h2>Rangkuman</h2>
+            <div class="button-box">
+                <button onclick="toggleDropdown('dropdown-1')">Mobil Tersedia</button>
+                <div id="dropdown-1" class="dropdown-list">
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                </div>
+    
+                <button onclick="toggleDropdown('dropdown-2')">Penyewaan Terselesaikan</button>
+                <div id="dropdown-2" class="dropdown-list">
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                </div>
+    
+                <button onclick="toggleDropdown('dropdown-3')">Penyewaan Sedang Berlangsung</button>
+                <div id="dropdown-3" class="dropdown-list">
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                </div>
+    
+                <button onclick="toggleDropdown('dropdown-4')">Pengemudi Tersedia</button>
+                <div id="dropdown-4" class="dropdown-list">
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                    <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Include JavaScript file -->
+    <script src="js/app.js"></script>
+</body>
+</html>
