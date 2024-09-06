@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- Left Sidebar -->
+    <!-- Existing Sidebar (Not the Right Sidebar) -->
     <div class="sidebar">
         <img class="logo" src="images/enthusiast-logo.png" alt="Logo">
         <a href="https://google.com">
@@ -36,40 +36,42 @@
     <!-- Main Content -->
     <div class="main-content">
         <h1 id="main-title">Rincian Transaksi</h1>
-        <div class="button-box">
-            <button id="all1" onclick="setActive(this)">all1</button>
-            <button id="all2" onclick="setActive(this)">all2</button>
-            <button id="all3" onclick="setActive(this)">all3</button>
-            <button id="all4" onclick="setActive(this)">all4</button>
+        <div class="button-main">
+            <button id="all1" onclick="setActive(this)">All</button>
+            <button id="all2" onclick="setActive(this)">Selesai</button>
+            <button id="all3" onclick="setActive(this)">Proses</button>
+            <button id="all4" onclick="setActive(this)">Batal</button>
         </div>
     </div>
 
-    <!-- Right Sidebar -->
-    <div class="right-sidebar">
-        <h2>Rangkuman</h2>
+    <!-- Right Sidebar with Dropdowns -->
+    <div class="right-sidebar peek" id="sidebar">
+        <h2>Rangkuman
+        <button class="close-btn" onclick="closeSidebar(event)">×</button>
+        </h2>
         <div class="button-box">
-            <button onclick="toggleDropdown('dropdown-1')">Mobil Tersedia</button>
+            <button onclick="toggleDropdown(event, 'dropdown-1')">Mobil Tersedia</button>
             <div id="dropdown-1" class="dropdown-list">
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
             </div>
 
-            <button onclick="toggleDropdown('dropdown-2')">Penyewaan Terselesaikan</button>
+            <button onclick="toggleDropdown(event, 'dropdown-2')">Penyewaan Terselesaikan</button>
             <div id="dropdown-2" class="dropdown-list">
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
             </div>
 
-            <button onclick="toggleDropdown('dropdown-3')">Penyewaan Sedang Berlangsung</button>
+            <button onclick="toggleDropdown(event, 'dropdown-3')">Penyewaan Sedang Berlangsung</button>
             <div id="dropdown-3" class="dropdown-list">
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
             </div>
 
-            <button onclick="toggleDropdown('dropdown-4')">Pengemudi Tersedia</button>
+            <button onclick="toggleDropdown(event, 'dropdown-4')">Pengemudi Tersedia</button>
             <div id="dropdown-4" class="dropdown-list">
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
                 <div><a href="https://youtube.com" target="_blank">youtube.com</a></div>
