@@ -107,7 +107,7 @@ body {
 }
 
 .right-sidebar.peek {
-    transform: translateX(calc(100% - 2vw)); /* Use viewport width for dynamic peek */
+    transform: translateX(calc(100% - 1vw)); /* Use viewport width for dynamic peek */
 }
 
 .right-sidebar.peek:hover {
