@@ -54,7 +54,7 @@ if (isset($_GET['id'])) {
             <!--pembuatan tombol aksi dalam form tambah data-->
                 <div class="aksiform">
                      <button type="submit" name="update" id="update">Perbahari Data</button>
-                     <a href="pengemudi/supir.php" class="button-aksi" role="button">Batal</a>
+                     <a href="supir.php" class="button-aksi" role="button">Batal</a>
 
                 </div>
 

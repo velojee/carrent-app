@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include 'connection.php';
 
 if(isset( $_POST['username'] ) && isset( $_POST['password'])){
     function validate($data){
@@ -15,7 +15,7 @@ if(isset( $_POST['username'] ) && isset( $_POST['password'])){
     header('Location: index.php?error=isi semua data');
     exit();
     }else{
-        $stmt= $conn->prepare('SELECT * FROM pengguna WHERE id_pengguna = ?');
+        $stmt= $conn->prepare('SELECT * FROM pengguna WHERE usernamelogin = ?');
         $stmt->bind_param('s',$username);
         $stmt->execute();
         $result=$stmt->get_result();
@@ -25,7 +25,7 @@ if(isset( $_POST['username'] ) && isset( $_POST['password'])){
             if ($password === $fetchdata['password']) {
                 // redirect kedalam dashboard
                 $_SESSION['username'] = $fetchdata['username'];
-                header('Location: dashboard.html');
+                header('Location: dashboard.php');
                 exit();
             }else {
                 // password yang dimasukan tidak sesuai
