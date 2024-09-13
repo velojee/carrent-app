@@ -25,6 +25,7 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Pengguna Sistem</title>
+    <link rel="stylesheet" href="css/supir.css">
 </head>
 <body>
             
@@ -35,11 +36,13 @@ if (isset($_GET['id'])) {
             <label class="labelform">Login Username</label>
             <input id="updateuname" type="text" class="indataform" name="updateuname" value="<?php echo $row["usernamelogin"];?>">
 
-                <!--menu radio button jenis kelamin-->
-                <div class="indataradio">
-                    <input type="radio" name="updatelevel" value="admin">admin
-                    <input type="radio" name="updatelevel" value="operator">operator
-                </div>
+            <!-- Dropdown for Jenis Pengguna -->
+            <label for="updatelevel" class="labelform">Jenis Pengguna</label>
+            <select id="updatelevel" name="updatelevel" class="indataform" required>
+                <option value="" disabled selected>-- Pilih Jenis Pengguna --</option>
+                <option value="admin">Admin</option>
+                <option value="operator">Operator</option>
+            </select>
 
             <label class="labelform">Nomor Pemilik Akun</label>
             <input id="updatenamapengguna" type="text" class="indataform" name="updatenamapengguna" value="<?php echo $row["nama_pengguna"];?>">

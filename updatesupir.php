@@ -25,11 +25,11 @@ if (isset($_GET['id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Pengemudi</title>
+    <link rel="stylesheet" href="css/supir.css">
 </head>
 <body>
-            
     <div class="container"> <!-- class container -->
-    <h2>Edit Data Supir</h2>
+        <h2>Edit Data Supir</h2>
         <form action="crud.php" class="formcrud" method="POST"><!-- pembuatan class form tambah-->
             <!--menu dalam form tambah-->
             <input type="hidden" name="id" id="id" value="<?php echo $row["id_pengemudi"];?>">
@@ -39,11 +39,11 @@ if (isset($_GET['id'])) {
             <label class="labelform">Nama Pengemudi</label>
             <input id="updatenama" type="text" class="indataform" name="updatenama" value="<?php echo $row["nama_pengemudi"];?>">
 
-                <!--menu radio button jenis kelamin-->
-                <div class="indataradio">
-                    <input type="radio" name="updatejk" value="Laki- Laki">Laki- Laki
-                    <input type="radio" name="updatejk" value="Perempuan">Perempuan
-                </div>
+            <label class="labelform">Jenis Kelamin</label>
+            <select id="updatejk" name="updatejk" class="indataform" required>
+                <option value="Laki- Laki" <?php echo ($row["jenis_kelamin"] == 'Laki- Laki') ? 'selected' : ''; ?>>Laki-laki</option>
+                <option value="Perempuan" <?php echo ($row["jenis_kelamin"] == 'Perempuan') ? 'selected' : ''; ?>>Perempuan</option>
+            </select>
 
             <label class="labelform">Nomor Kontak</label>
             <input id="updatetelp" type="text" class="indataform" name="updatetelp" value="<?php echo $row["nomor_telp"];?>">
@@ -52,14 +52,11 @@ if (isset($_GET['id'])) {
             <input id="updateharga" type="text" class="indataform" name="updateharga" value="<?php echo $row["harga"];?>">
 
             <!--pembuatan tombol aksi dalam form tambah data-->
-                <div class="aksiform">
-                     <button type="submit" name="update" id="update">Perbahari Data</button>
-                     <a href="supir.php" class="button-aksi" role="button">Batal</a>
-
-                </div>
-
+            <div class="aksiform">
+                <button type="submit" name="update" id="update">Perbahari Data</button>
+                <a href="supir.php" class="button-aksi" role="button">Batal</a>
+            </div>
         </form>
-
     </div>
 </body>
 </html>
