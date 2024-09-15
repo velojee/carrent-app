@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/dahboard.css">
     <script src="js/dashboard.js"></script>
+=======
+    <link rel="stylesheet" href="css/style.css">
+>>>>>>> 475f8a15432a2cea1427d23141a7e9a36e136145
 </head>
 <body>
 
@@ -32,10 +36,13 @@
             <img class="icon" src="images/pengguna-icon.png" alt="home-icon">
             Pengguna
         </a>
+<<<<<<< HEAD
         <a href="login.php">
             <img class="icon" src="images/back.png" alt="home-icon">
             Logout
         </a>
+=======
+>>>>>>> 475f8a15432a2cea1427d23141a7e9a36e136145
     </div>
 
     <!-- Main Content -->
@@ -49,9 +56,14 @@
         </div>
     </div>
 
+<<<<<<< HEAD
 
     <!-- Right Sidebar with Dropdowns -->
         <div class="right-sidebar peek" id="sidebar">
+=======
+    <!-- Right Sidebar with Dropdowns -->
+    <div class="right-sidebar peek" id="sidebar">
+>>>>>>> 475f8a15432a2cea1427d23141a7e9a36e136145
         <h2>Rangkuman
         <button class="close-btn" onclick="closeSidebar(event)">×</button>
         </h2>
@@ -86,5 +98,10 @@
         </div>
     </div>
 
+<<<<<<< HEAD
+=======
+    <script src="js/app.js"></script>
+
+>>>>>>> 475f8a15432a2cea1427d23141a7e9a36e136145
 </body>
 </html>

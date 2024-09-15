@@ -15,7 +15,11 @@ include("connection.php");
     <div class="tablecontainer">
         <!-- Button Container -->
         <div class="button-main">
+<<<<<<< HEAD
             <a class="btn btn-back" href="supir.php" role="button">Kembali</a>
+=======
+            <a class="btn btn-back" href="supir.php" role="button">Back</a>
+>>>>>>> 475f8a15432a2cea1427d23141a7e9a36e136145
             <a class="btn btn-add" href="addsupir.php" role="button">Tambah</a>
         </div>
         <!-- Form to Add New Driver -->

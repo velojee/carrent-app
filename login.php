@@ -40,5 +40,9 @@ if(isset( $_POST['username'] ) && isset( $_POST['password'])){
     }
 }
 $stmt->close();
+<<<<<<< HEAD
 $conn->close();
 
+=======
+$conn->close();
+>>>>>>> 475f8a15432a2cea1427d23141a7e9a36e136145

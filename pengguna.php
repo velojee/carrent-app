@@ -14,8 +14,13 @@ include("connection.php");
     <div class="tablecontainer">
         <!-- Button Container -->
         <div class="button-main">
+<<<<<<< HEAD
         <a class="btn btn-back" href="dashboard.php" role="button">Kembali</a>
         <a class="btn btn-add" href="addpengguna.php" role="button">Tambah</a>
+=======
+            <a class="btn btn-add" href="dashboard.php" role="button">Kembali</a>
+            <a class="btn btn-add" href="addpengguna.php" role="button">Tambah</a>
+>>>>>>> 475f8a15432a2cea1427d23141a7e9a36e136145
         </div>
         <!-- Table Show Case Data -->
         <table>
