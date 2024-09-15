@@ -1,0 +1,209 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, table, a, form, input, select, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Basic styling for the body */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container for the form and buttons */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the table and buttons */
+.tablecontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the button container */
+.button-main {
+    margin-bottom: 20px;
+}
+
+/* General button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* Button colors and hover effects */
+.btn-back {
+    background-color: #007bff; /* Color for "Back" */
+}
+
+.btn-add {
+    background-color: #28a745; /* Color for "Tambah" */
+}
+
+.btn-update {
+    background-color: #ffc107; /* Color for update buttons */
+}
+
+.btn-submit {
+    background-color: #007bff; /* Color for submit button */
+}
+
+/* Button hover effects */
+.btn-back:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+.btn-add:hover {
+    background-color: #218838; /* Darker shade for hover effect */
+}
+
+.btn-update:hover {
+    background-color: #e0a800; /* Darker shade for hover effect */
+}
+
+.btn-submit:hover {
+    background-color: #0056b3; /* Darker shade for submit button */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.labelform {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.indataform {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+}
+
+/* Ensure buttons are full width */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Color for the submit button */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+.button-aksi {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #dc3545; /* Color for cancel button */
+    transition: background-color 0.3s ease;
+}
+
+.button-aksi:hover {
+    background-color: #c82333; /* Darker shade for hover effect */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff; /* Header background color */
+    color: #fff; /* Header text color */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tablecontainer {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input, select, button {
+        width: 100%;
+    }
+}
